@@ -45,7 +45,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Title>Styled Component</Title>
-        <Descrption>test description</Descrption>
         <Container>
           <Box bgcolor="red" />
           <Box bgcolor="blue" />
