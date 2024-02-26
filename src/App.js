@@ -1,24 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
+const GlobalStyle = createGlobalStyle`
+ *{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+body{
+  background-color: ${(props) => props.theme.colors.default};
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+}
+`;
+const Container = styled.div`
+  display: flex;
+  border: solid ${(props) => props.theme.colors.primary} 2px;
+`;
+
+const Box = styled.div`
+  background-color: ${({ bgcolor }) => bgcolor};
+  height: 200px;
+  flex: 1; // flex width instaed of width property
+`;
+
+const Title = styled.h1`
+  color: ${(props) => props.theme.colors.secondary};
+`;
+
+const Descrption = styled.p`
+  color: ${(props) => props.theme.colors.secondary};
+`;
+
+const theme = {
+  colors: {
+    primary: 'red',
+    secondary: 'purple',
+    default: 'white',
+  },
+};
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Title>Styled Component</Title>
+        <Descrption>test description</Descrption>
+        <Container>
+          <Box bgcolor="red" />
+          <Box bgcolor="blue" />
+          <Box bgcolor="green" />
+        </Container>
+      </ThemeProvider>
+    </>
   );
 }
 
