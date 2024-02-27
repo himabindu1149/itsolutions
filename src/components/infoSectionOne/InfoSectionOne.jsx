@@ -21,7 +21,7 @@ export const InfoSectionOne = () => {
           <Image src={SectionOneImage}></Image>
         </Right>
         <Left>
-          <Title>WHY CHOOSE US?</Title>
+          <Title>Why Choose us?</Title>
           <Header>IT lifecycle management all in one place</Header>
           <Description>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

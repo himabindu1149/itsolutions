@@ -4,13 +4,14 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   color: white;
   background-color: black;
   width: 100%;
   margin-top: 5%;
   height: 40%;
+  padding: 10px 0;
   //for Mobiles
   @media only screen and (max-width: 600px) {
     width: 100%;
@@ -73,7 +74,7 @@ const MenuItem = styled.li`
   color: ${(props) => props.theme.colors.textDark};
   cursor: pointer;
   &:hover {
-    color: white;
+    color: ${(props) => props.theme.colors.bgDefault};
   }
 `;
 
@@ -81,7 +82,7 @@ const MenuItems = styled.div`
   margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
-  color: gray;
+  color: ${(props) => props.theme.colors.textDark};
   cursor: pointer;
 `;
 
@@ -89,10 +90,10 @@ const CopyRight = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10%;
-  background-color: gray;
-  color: white;
+  background-color: ${(props) => props.theme.colors.textDark};
+  color: ${(props) => props.theme.colors.bgDefault};
   font-size: 20px;
+  padding: 10px 10px;
 `;
 const Footer = () => {
   return (
@@ -124,7 +125,7 @@ const Footer = () => {
         </MenuItems>
       </Container>
 
-      <CopyRight>&copy; 2022 Codingstrade - All Rights Reserved.</CopyRight>
+      <CopyRight>&copy; 2022 ICode! - All Rights Reserved.</CopyRight>
     </>
   );
 };

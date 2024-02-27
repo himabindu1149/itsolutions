@@ -24,6 +24,7 @@ export const Title = styled.div`
 
 export const Description = styled.p`
   color: ${({ theme }) => theme.colors.textDark};
+  margin-bottom: 20px;
 `;
 
 export const Left = styled.div`
@@ -38,7 +39,6 @@ export const Image = styled.img`
 
 export const List = styled.div`
   list-style: none;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,8 +48,8 @@ export const List = styled.div`
 export const ListItem = styled.li`
   color: ${({ theme }) => theme.colors.primary};
   border: 2px solid white;
-  min-width: 200px;
   margin: 4px;
+  min-width: 250px;
   text-align: left;
   -webkit-box-shadow: 0px -1px 15px -3px
     ${({ theme }) => theme.colors.aliceBlue};

@@ -53,7 +53,7 @@ const TeamPosition = styled.div`
 const Teams = () => {
   return (
     <Container>
-      <TextBanner title={'We are union'} subtitle={'Our Team'} />
+      <TextBanner title={'We are Union'} subtitle={'Our Team'} />
       <Wrapper>
         <Card>
           <CardImage src={avatarImage1} />

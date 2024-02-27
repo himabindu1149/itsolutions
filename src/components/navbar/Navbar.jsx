@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  margin-bottom: 50px;
+  width: 80%;
+  margin: auto;
+  position: fixed;
   background-color: ${({ theme }) => theme.colors.bgDefault};
   height: 10%;
   display: flex;
@@ -41,7 +43,7 @@ const Button = styled.button`
   color: ${({ theme }) => theme.colors.bgDefault};
   background-color: ${({ theme }) => theme.colors.primary};
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
     background-color: ${({ theme }) => theme.colors.bgDefault};

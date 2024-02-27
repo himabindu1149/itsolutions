@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import heroImage from '../../images/hero.png';
 
 const Container = styled.div`
-  height: 90%;
   display: flex;
+  padding-top: 10%;
 `;
 
 const Left = styled.div`
@@ -33,6 +33,7 @@ const Image = styled.img`
 
 const ButtonContainer = styled.div`
   display: flex;
+  margin: 20px;
 `;
 
 const Button = styled.button`

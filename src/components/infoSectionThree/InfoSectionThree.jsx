@@ -21,7 +21,7 @@ export const InfoSectionThree = () => {
           <Image src={SectionThreeImage}></Image>
         </Right>
         <Left>
-          <Title>WHY TRUST US?</Title>
+          <Title>Why Trust us?</Title>
           <Header>
             Software Asset Management (SAM) / Software Lifecycle Management
           </Header>

@@ -17,10 +17,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 5%;
 `;
 export const Blog = () => {
   return (
-    <>
+    <div>
       <TextBanner title={'Our Blogs'} subtitle={'Recent News'} />
       <Container>
         <Card>
@@ -63,6 +64,6 @@ export const Blog = () => {
           </CardContent>
         </Card>
       </Container>
-    </>
+    </div>
   );
 };
