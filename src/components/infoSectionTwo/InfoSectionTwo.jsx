@@ -12,6 +12,20 @@ export const Container = styled.div`
   background-image: url(${({ sectionImage }) => sectionImage});
   background-size: cover;
   background-repeat: no-repeat;
+  //for Mobiles
+  @media only screen and (max-width: 600px) {
+    background-size: 100% 100%;
+    height: 40%;
+  }
+  //for Tablets and Medium Screens
+  @media only screen and (min-width: 600px) {
+    background-size: 100% 100%;
+    height: 40%;
+  }
+  //for laptops and desktops
+  @media only screen and (min-width: 992px) {
+    background-size: cover;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -30,10 +44,11 @@ const Title = styled.div`
 
 const Description = styled.div`
   color: white;
-  width: 40%;
+  width: 50%;
   font-weight: lighter;
   font-size: 20px;
   padding: 10px;
+  align-items: center;
 `;
 export const InfoSectionTwo = () => {
   return (

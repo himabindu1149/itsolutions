@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const Card = styled.div`
   width: 250px;
+  margin: 40px 40px;
 `;
 const CardContent = styled.div`
   display: flex;

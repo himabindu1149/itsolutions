@@ -21,6 +21,19 @@ export const Card = styled.div`
     background-position: left bottom;
     cursor: pointer;
   }
+
+  //for Mobiles
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+  //for Tablets and Medium Screens
+  @media only screen and (min-width: 600px) {
+    width: 350px;
+  }
+  //for laptops and desktops
+  @media only screen and (min-width: 992px) {
+    width: 330px;
+  }
 `;
 
 export const CardContent = styled.div`

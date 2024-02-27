@@ -10,11 +10,43 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  //Mobiles
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 8%;
+  }
+
+  //Tab
+  @media screen and (min-width: 600px) {
+    width: 100%;
+  }
+
+  //Laptops
+  @media screen and (min-width: 992px) {
+    width: 80%;
+    height: 10%;
+  }
 `;
 
 const Left = styled.div``;
 const Center = styled.div``;
-const Right = styled.div``;
+const Right = styled.div`
+  //Mobiles
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+
+  //Tab
+  @media screen and (min-width: 600px) {
+    display: flex;
+  }
+
+  //Laptops
+  @media screen and (min-width: 992px) {
+    display: flex;
+  }
+`;
 
 const Logo = styled.label`
   color: ${({ theme }) => theme.colors.textDark};
@@ -36,6 +68,14 @@ const MenuItem = styled.li`
     color: ${({ theme }) => theme.colors.primary};
   }
   cursor: pointer;
+  @media only screen and (min-width: 600px) {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  @media only screen and (min-width: 992px) {
+    margin-right: 20px;
+    font-size: 20px;
+  }
 `;
 
 const Button = styled.button`
@@ -48,6 +88,12 @@ const Button = styled.button`
     color: ${({ theme }) => theme.colors.primary};
     background-color: ${({ theme }) => theme.colors.bgDefault};
     border: 2px solid blue;
+  }
+  @media only screen and (min-width: 600px) {
+    padding: 8px 15px;
+  }
+  @media only screen and (min-width: 992px) {
+    padding: 10px 20px;
   }
 `;
 const Navbar = () => {

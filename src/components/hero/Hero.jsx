@@ -5,6 +5,16 @@ import heroImage from '../../images/hero.png';
 const Container = styled.div`
   display: flex;
   padding-top: 10%;
+
+  @media only screen and (max-width: 600px) {
+    height: 60%;
+  }
+  @media only screen and (min-width: 600px) {
+    height: 50%;
+  }
+  @media only screen and (min-width: 992px) {
+    height: 80%;
+  }
 `;
 
 const Left = styled.div`
@@ -12,6 +22,16 @@ const Left = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (min-width: 600px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 60%;
+  }
 `;
 const Right = styled.div``;
 
@@ -20,15 +40,48 @@ const Title = styled.div`
   font-weight: bold;
   color: ${({ theme }) => theme.colors.primary};
   justify-content: center;
+  //for Mobiles
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    font-size: 30px;
+  }
+  //for Tablets and Medium Screens
+  @media only screen and (min-width: 600px) {
+    width: 85%;
+    font-size: 30px;
+  }
+  //for laptops and desktops
+  @media only screen and (min-width: 992px) {
+    width: 80%;
+  }
 `;
 
 const Description = styled.p`
   font-size: 20px;
+
   color: ${({ theme }) => theme.colors.textDark};
+  //for Mobiles
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
+  //for Tablets and Medium Screens
+  @media only screen and (min-width: 600px) {
+    width: 70%;
+  }
+  //for laptops and desktops
+  @media only screen and (min-width: 992px) {
+    width: 80%;
+  }
 `;
 
 const Image = styled.img`
   width: 400px;
+  @media only screen and (min-width: 600px) {
+    width: 400px;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 500px;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -40,7 +93,6 @@ const Button = styled.button`
   font-weight: bold;
   color: ${({ theme }) => theme.colors.bgDefault};
   border: transparent;
-  padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
   border-radius: 20px;
@@ -58,6 +110,18 @@ const Button = styled.button`
     border: 2px solid blue;
     background-position: left bottom;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 10px 25px;
+  }
+  //for Tablets and Medium Screens
+  @media only screen and (min-width: 600px) {
+    padding: 10px 30px;
+  }
+  //for laptops and desktops
+  @media only screen and (min-width: 992px) {
+    padding: 10px 20px;
   }
 `;
 const Hero = () => {
